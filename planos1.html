@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simulador de Planos</title>
+    <link rel="stylesheet" type ="text/css" href="planos1.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.22.0/dist/pdf-lib.js"></script> -->
+</head>
+
+<body>
+    <div class="containerButton">
+        <button id="unifamiliarButton" >Casa</button> 
+        <button id="edificacionButton">Edificio</button>
+    </div>
+    
+   
+    <div class="content" id="unifamiliarContent">
+        <h3>Contenido de Casa</h3>
+        <div class="rowPisos">
+                    <p>Número de pisos:</p>
+                    <select id="pisos" onchange="cambiandoNroPisos">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <div id="formContainner" class="floor-container" ></div>
+        </div>
+       
+        <!-- GENERARAR FORMULARIOS POR PISOS -->
+        <div class="row" id="pisoForm" ></div>
+        <div class="columnImagen">
+            <div id="imagenContainer">
+                <img id="imagen" class="custom-image" style="display: none;">
+            </div>
+            
+            <!-- <button id="descargarButton" onclick="descargarPDF()" style="display: none;">Descargar en PDF</button>  -->
+        </div>
+    </div>
+    
+    <div class="container" id="edificacion">
+        <div class="containerEdificacion">
+            <form name="formulario"> 
+                <label>Numero de pisos del edificio</label>
+                    <div class="col">
+                        <select name=edificio id="edificio" > 
+                            <option value="1">1</option>
+                            <option value="2">2 (No disponible)</option>
+                            <option value="3">3 (No disponible)</option>
+                            <option value="4">4 (No disponible)</option>
+                        </select>
+                    </div>
+
+                    <label>Tipo de construccíon</label>
+                    <div class="col">
+                    <select name=tipo id="tipo"> 
+                        <option value="tipo_1" selected>Vivienda</option>
+                        <option value="tipo_2">Comercio (No disponible)</option>
+                        <option value="tipo_3">Vivienda + Comercio (No disponible)</option>
+                    </select>
+                    </div>
+                <!-- <input type="submit" value="Obtener plano" /> -->
+            </form>
+        </div>
+        <button id="GenerarButton">Agregar Datos</button>
+    </div>
+
+    <div class="content" id="multifamiliarContent">
+        
+        <div class="row">
+            <div class="column">
+                <div class="column1">
+                    <h3>Contenido Departamento</h3>
+                    <p>Elija las opciones</p>
+                    <label for="ancho22" onchange="actualizarOpciones">Ancho(obligatorio):</label>
+                    <select id="ancho22">
+                        <option value="6">6 metros</option>
+                        <option value="7">7 metros</option>
+                        <option value="8">8 metros</option>
+                    </select>
+
+                    <label for="largo22">Largo:</label>
+                    <select id="largo22">
+                        <!-- Opciones iniciales para Ancho de 6 metros -->
+                        <option value="17">17 metros</option>
+                        <option value="15">15 metros</option>
+                        <option value="18">16 metros</option>
+                    </select>
+                    <label>Posición de la escalera(obligatorio):</label>
+                    <select id="escalera22"><br>
+                        <option value="1">Adelante</option>
+                        <option value="2">Medio</option>
+                        <option value="3">Fondo</option>
+                    </select>
+
+                    <label>Número de Cuartos:</label>
+                    <select id="cuartos22">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label>Terraza:</label>
+                    <select id="terraza22">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label>Número de Baños:</label>
+                    <select id="banos22">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2 1/2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                    <label>Sala:</label>
+                    <select id="sala22">
+                        <option value="Si">Sí</option>
+                        <!-- <option value="no">No</option> -->
+                    </select>
+
+                    <label>Comedor:</label>
+                    <select id="comedor22">
+                        <option value="Si">Sí</option>
+                        <!-- <option value="no">No</option> -->
+                    </select>
+
+                    <label>Cocina:</label>
+                    <select id="cocina22">
+                        <option value="Si">Sí</option>
+                        <!-- <option value="no">No</option> -->
+                    </select>
+
+                    <label>Lavandería:</label>
+                    <select id="lavanderia22">
+                        <option value="Si">Sí</option>
+                        <!-- <option value="no">No</option> -->
+                    </select>
+                    <button onclick="mostrarImagen2()">Generar Plano </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="column2">
+                    <div id="imagenContainer2">
+                        <img id="imagen2" style="display: none;">
+                    </div>
+                    <div>
+                        <!-- <button id="descargarButton2" onclick="descargarPDF2()" style="display: none;">Descargar en PDF</button> -->
+                        <button onclick="pasarelaPagos()">ACCEDER A PAQUETE COMPLETO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="planos1.js"></script>
+</html>

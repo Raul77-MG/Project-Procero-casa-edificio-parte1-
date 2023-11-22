@@ -1,0 +1,132 @@
+
+.content {
+    display: none;
+    
+}
+.containerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* height: 100vh; Utiliza el 100% del alto de la ventana */
+}
+.containerEdificacion{
+    margin: 10px;
+}
+/* Estilo para los botones en estado normal */
+button {
+    background-color: #00EB89;
+    color: #000000;
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* Estilo para los botones en estado "clic" */
+button:active {
+    background-color: #e74c3c;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.rowPisos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: flex-start;
+}
+.col {
+    flex: 1;
+    /* padding: 10px;
+    display: flex;
+    flex-direction: column; */
+    justify-content: space-between; 
+}
+.column1 {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.column2 {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-image {
+    margin: 5px; /* Ajusta el margen según sea necesario */
+    max-width: 100%; /* Asegura que la imagen se ajuste dentro de su contenedor */
+    max-height: 100%;
+}
+body {
+    background-color: #333333; /* Cambia el color de fondo a tu preferencia */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 100vh; */
+    font: 16px;
+}
+label, p,h1{
+    color: #ffffff; /* Color blanco para etiquetas, párrafos y encabezados h3 */
+    /* Otras propiedades comunes aquí */
+    
+}
+h3{
+    color: #ffffff;
+    justify-content: center;
+    
+}
+#formContainner{
+    justify-content: center;
+}
+#imagenContainer2 {
+    text-align: center; /* Centra la imagen horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+}
+
+#imagen2 {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+    margin: auto; /* Centra la imagen horizontalmente */
+}
+/* Contenedor principal */
+.floor-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los pisos */
+    /* padding: 10px; */
+    flex-direction: column;
+  }
+  .floor-form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+    /* Estilos CSS para el contenedor de la imagen */
+#imagenContainer {
+
+    margin-top: 20px; /* Espacio por encima del contenedor */
+    text-align: center; /* Centra el contenido */
+}
+
+#imagen {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    max-height: 400px; /* Altura máxima de la imagen */
+    /* Agrega más estilos según tu preferencia */
+}
